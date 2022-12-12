@@ -2,7 +2,7 @@
 /**
  * 1.建立表單
  * 2.建立處理檔案程式
- * 3.搬移檔案
+ * 3.搬移檔案
  * 4.顯示檔案列表
  */
 
@@ -19,7 +19,21 @@
 <body>
  <h1 class="header">檔案上傳練習</h1>
  <!----建立你的表單及設定編碼----->
+ <?php
+ if(isset($_GET['upload']) && $_GET['upload']=='success'){
+    echo "上傳成功";
+ }
+ 
+ ?>
+<form action="./api/upload.php" method="POST" enctype="multipart/form-data">
+<ul>
+    <li>描述:<input type="text" name="discription" id=""></li>
+    <li>檔案:<input type="file" name="file_name" id=""></li>
+    <li><input type="submit" name="" id="" value="上傳"></li>
+</ul>
 
+
+</form>
 
 
 
